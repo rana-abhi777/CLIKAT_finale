@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D1B19421E7037F4005298A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1B19281E7037F4005298A2 /* AppDelegate.swift */; };
+		1D1B19431E7037F4005298A2 /* ImageViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1B192C1E7037F4005298A2 /* ImageViewCollectionViewCell.swift */; };
+		1D1B19451E7037F4005298A2 /* OffersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1B192E1E7037F4005298A2 /* OffersCollectionViewCell.swift */; };
+		1D1B19471E7037F4005298A2 /* ProductCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1B19301E7037F4005298A2 /* ProductCategoryCollectionViewCell.swift */; };
+		1D1B19491E7037F4005298A2 /* RecommendedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1B19321E7037F4005298A2 /* RecommendedCollectionViewCell.swift */; };
+		1D1B194B1E7037F4005298A2 /* ImageViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1B19351E7037F4005298A2 /* ImageViewTableViewCell.swift */; };
+		1D1B194D1E7037F4005298A2 /* OffersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1B19371E7037F4005298A2 /* OffersTableViewCell.swift */; };
+		1D1B194F1E7037F4005298A2 /* ProductCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1B19391E7037F4005298A2 /* ProductCategoryTableViewCell.swift */; };
+		1D1B19511E7037F4005298A2 /* RecommendedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1B193B1E7037F4005298A2 /* RecommendedTableViewCell.swift */; };
+		1D1B19531E7037F4005298A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1B193D1E7037F4005298A2 /* ViewController.swift */; };
+		1D1B19541E7037F4005298A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D1B19401E7037F4005298A2 /* LaunchScreen.storyboard */; };
+		1D1B19551E7037F4005298A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D1B19411E7037F4005298A2 /* Main.storyboard */; };
+		1D1B19571E70382D005298A2 /* APIHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1B19561E70382D005298A2 /* APIHandle.swift */; };
+		1D1B195B1E704B36005298A2 /* MapperClassForAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1B195A1E704B36005298A2 /* MapperClassForAPI.swift */; };
+		1D275BAB1E713F3500D045EA /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D275BAA1E713F3500D045EA /* LeftMenuViewController.swift */; };
+		1D60EBD51E72CBC300F3167D /* commonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D60EBC91E72CBC300F3167D /* commonClass.swift */; };
+		1D60EBD61E72CBC300F3167D /* ImageViewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D60EBCC1E72CBC300F3167D /* ImageViewCollectionViewCell.xib */; };
+		1D60EBD71E72CBC300F3167D /* OffersCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D60EBCD1E72CBC300F3167D /* OffersCollectionViewCell.xib */; };
+		1D60EBD81E72CBC300F3167D /* ProductCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D60EBCE1E72CBC300F3167D /* ProductCategoryCollectionViewCell.xib */; };
+		1D60EBD91E72CBC300F3167D /* RecommendedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D60EBCF1E72CBC300F3167D /* RecommendedCollectionViewCell.xib */; };
+		1D60EBDA1E72CBC300F3167D /* ImageViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D60EBD11E72CBC300F3167D /* ImageViewTableViewCell.xib */; };
+		1D60EBDB1E72CBC300F3167D /* OffersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D60EBD21E72CBC300F3167D /* OffersTableViewCell.xib */; };
+		1D60EBDC1E72CBC300F3167D /* ProductCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D60EBD31E72CBC300F3167D /* ProductCategoryTableViewCell.xib */; };
+		1D60EBDD1E72CBC300F3167D /* RecommendedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D60EBD41E72CBC300F3167D /* RecommendedTableViewCell.xib */; };
+		1D60EBE21E72CC4D00F3167D /* AppearFunctionality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D60EBDF1E72CC4D00F3167D /* AppearFunctionality.swift */; };
+		1D60EBE31E72CC4D00F3167D /* BackFunctionality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D60EBE01E72CC4D00F3167D /* BackFunctionality.swift */; };
+		1D60EBE41E72CC4D00F3167D /* EnumClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D60EBE11E72CC4D00F3167D /* EnumClass.swift */; };
+		1DCBCD741E6FB13F00DF7E18 /* KLICKAT_replication3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1DCBCD721E6FB13F00DF7E18 /* KLICKAT_replication3.xcdatamodeld */; };
+		1DCBCD761E6FB13F00DF7E18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DCBCD751E6FB13F00DF7E18 /* Assets.xcassets */; };
+		1DF97A171E7276D6005EA017 /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF97A161E7276D6005EA017 /* SideMenuTableViewCell.swift */; };
+		1DF97A201E728E25005EA017 /* SideMenuTableViewHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF97A1F1E728E25005EA017 /* SideMenuTableViewHeaderCell.swift */; };
+		8A30CA75E9727F7DC5039AD7 /* Pods_KLICKAT_replication3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85DB55E1913BF18BCFE015E0 /* Pods_KLICKAT_replication3.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D1B19281E7037F4005298A2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1D1B192C1E7037F4005298A2 /* ImageViewCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewCollectionViewCell.swift; sourceTree = "<group>"; };
+		1D1B192E1E7037F4005298A2 /* OffersCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersCollectionViewCell.swift; sourceTree = "<group>"; };
+		1D1B19301E7037F4005298A2 /* ProductCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		1D1B19321E7037F4005298A2 /* RecommendedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendedCollectionViewCell.swift; sourceTree = "<group>"; };
+		1D1B19351E7037F4005298A2 /* ImageViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewTableViewCell.swift; sourceTree = "<group>"; };
+		1D1B19371E7037F4005298A2 /* OffersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersTableViewCell.swift; sourceTree = "<group>"; };
+		1D1B19391E7037F4005298A2 /* ProductCategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCategoryTableViewCell.swift; sourceTree = "<group>"; };
+		1D1B193B1E7037F4005298A2 /* RecommendedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendedTableViewCell.swift; sourceTree = "<group>"; };
+		1D1B193D1E7037F4005298A2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1D1B19401E7037F4005298A2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1D1B19411E7037F4005298A2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1D1B19561E70382D005298A2 /* APIHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHandle.swift; sourceTree = "<group>"; };
+		1D1B195A1E704B36005298A2 /* MapperClassForAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapperClassForAPI.swift; sourceTree = "<group>"; };
+		1D275BAA1E713F3500D045EA /* LeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
+		1D60EBC91E72CBC300F3167D /* commonClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commonClass.swift; sourceTree = "<group>"; };
+		1D60EBCC1E72CBC300F3167D /* ImageViewCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageViewCollectionViewCell.xib; sourceTree = "<group>"; };
+		1D60EBCD1E72CBC300F3167D /* OffersCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OffersCollectionViewCell.xib; sourceTree = "<group>"; };
+		1D60EBCE1E72CBC300F3167D /* ProductCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		1D60EBCF1E72CBC300F3167D /* RecommendedCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendedCollectionViewCell.xib; sourceTree = "<group>"; };
+		1D60EBD11E72CBC300F3167D /* ImageViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageViewTableViewCell.xib; sourceTree = "<group>"; };
+		1D60EBD21E72CBC300F3167D /* OffersTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OffersTableViewCell.xib; sourceTree = "<group>"; };
+		1D60EBD31E72CBC300F3167D /* ProductCategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCategoryTableViewCell.xib; sourceTree = "<group>"; };
+		1D60EBD41E72CBC300F3167D /* RecommendedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendedTableViewCell.xib; sourceTree = "<group>"; };
+		1D60EBDF1E72CC4D00F3167D /* AppearFunctionality.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearFunctionality.swift; sourceTree = "<group>"; };
+		1D60EBE01E72CC4D00F3167D /* BackFunctionality.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackFunctionality.swift; sourceTree = "<group>"; };
+		1D60EBE11E72CC4D00F3167D /* EnumClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumClass.swift; sourceTree = "<group>"; };
+		1DCBCD681E6FB13F00DF7E18 /* KLICKAT_replication3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KLICKAT_replication3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DCBCD731E6FB13F00DF7E18 /* KLICKAT_replication3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KLICKAT_replication3.xcdatamodel; sourceTree = "<group>"; };
+		1DCBCD751E6FB13F00DF7E18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DCBCD7A1E6FB13F00DF7E18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DF97A161E7276D6005EA017 /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
+		1DF97A1F1E728E25005EA017 /* SideMenuTableViewHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewHeaderCell.swift; sourceTree = "<group>"; };
+		58C1A1809FB790D0CF3F13BF /* Pods-KLICKAT_replication3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KLICKAT_replication3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KLICKAT_replication3/Pods-KLICKAT_replication3.debug.xcconfig"; sourceTree = "<group>"; };
+		672B0F2C9415117D64EA1F8C /* Pods-KLICKAT_replication3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KLICKAT_replication3.release.xcconfig"; path = "Pods/Target Support Files/Pods-KLICKAT_replication3/Pods-KLICKAT_replication3.release.xcconfig"; sourceTree = "<group>"; };
+		85DB55E1913BF18BCFE015E0 /* Pods_KLICKAT_replication3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KLICKAT_replication3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1DCBCD651E6FB13E00DF7E18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A30CA75E9727F7DC5039AD7 /* Pods_KLICKAT_replication3.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D1B19261E7037F4005298A2 /* APIHandler */ = {
+			isa = PBXGroup;
+			children = (
+				1D1B19561E70382D005298A2 /* APIHandle.swift */,
+			);
+			path = APIHandler;
+			sourceTree = "<group>";
+		};
+		1D1B19271E7037F4005298A2 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				1D1B19281E7037F4005298A2 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		1D1B19291E7037F4005298A2 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				1D1B192A1E7037F4005298A2 /* Controller */,
+				1D1B193E1E7037F4005298A2 /* Modal */,
+				1D1B193F1E7037F4005298A2 /* View */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		1D1B192A1E7037F4005298A2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1D1B192B1E7037F4005298A2 /* CollectionViewCells */,
+				1D1B19341E7037F4005298A2 /* TableViewsCells */,
+				1D1B193D1E7037F4005298A2 /* ViewController.swift */,
+				1D275BAA1E713F3500D045EA /* LeftMenuViewController.swift */,
+				1DF97A161E7276D6005EA017 /* SideMenuTableViewCell.swift */,
+				1DF97A1F1E728E25005EA017 /* SideMenuTableViewHeaderCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1D1B192B1E7037F4005298A2 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				1D1B192C1E7037F4005298A2 /* ImageViewCollectionViewCell.swift */,
+				1D1B192E1E7037F4005298A2 /* OffersCollectionViewCell.swift */,
+				1D1B19301E7037F4005298A2 /* ProductCategoryCollectionViewCell.swift */,
+				1D1B19321E7037F4005298A2 /* RecommendedCollectionViewCell.swift */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		1D1B19341E7037F4005298A2 /* TableViewsCells */ = {
+			isa = PBXGroup;
+			children = (
+				1D1B19351E7037F4005298A2 /* ImageViewTableViewCell.swift */,
+				1D1B19371E7037F4005298A2 /* OffersTableViewCell.swift */,
+				1D1B19391E7037F4005298A2 /* ProductCategoryTableViewCell.swift */,
+				1D1B193B1E7037F4005298A2 /* RecommendedTableViewCell.swift */,
+			);
+			path = TableViewsCells;
+			sourceTree = "<group>";
+		};
+		1D1B193E1E7037F4005298A2 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				1D1B195A1E704B36005298A2 /* MapperClassForAPI.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		1D1B193F1E7037F4005298A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D1B19401E7037F4005298A2 /* LaunchScreen.storyboard */,
+				1D1B19411E7037F4005298A2 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D60EBC81E72CBC300F3167D /* CommonClasses */ = {
+			isa = PBXGroup;
+			children = (
+				1D60EBDE1E72CC4D00F3167D /* SliderClasses */,
+				1D60EBC91E72CBC300F3167D /* commonClass.swift */,
+			);
+			path = CommonClasses;
+			sourceTree = "<group>";
+		};
+		1D60EBCA1E72CBC300F3167D /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				1D60EBCB1E72CBC300F3167D /* CollectionViewCells */,
+				1D60EBD01E72CBC300F3167D /* TableViewCells */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
+		1D60EBCB1E72CBC300F3167D /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				1D60EBCC1E72CBC300F3167D /* ImageViewCollectionViewCell.xib */,
+				1D60EBCD1E72CBC300F3167D /* OffersCollectionViewCell.xib */,
+				1D60EBCE1E72CBC300F3167D /* ProductCategoryCollectionViewCell.xib */,
+				1D60EBCF1E72CBC300F3167D /* RecommendedCollectionViewCell.xib */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		1D60EBD01E72CBC300F3167D /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				1D60EBD11E72CBC300F3167D /* ImageViewTableViewCell.xib */,
+				1D60EBD21E72CBC300F3167D /* OffersTableViewCell.xib */,
+				1D60EBD31E72CBC300F3167D /* ProductCategoryTableViewCell.xib */,
+				1D60EBD41E72CBC300F3167D /* RecommendedTableViewCell.xib */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		1D60EBDE1E72CC4D00F3167D /* SliderClasses */ = {
+			isa = PBXGroup;
+			children = (
+				1D60EBDF1E72CC4D00F3167D /* AppearFunctionality.swift */,
+				1D60EBE01E72CC4D00F3167D /* BackFunctionality.swift */,
+				1D60EBE11E72CC4D00F3167D /* EnumClass.swift */,
+			);
+			path = SliderClasses;
+			sourceTree = "<group>";
+		};
+		1DCBCD5F1E6FB13E00DF7E18 = {
+			isa = PBXGroup;
+			children = (
+				1DCBCD6A1E6FB13F00DF7E18 /* KLICKAT_replication3 */,
+				1DCBCD691E6FB13F00DF7E18 /* Products */,
+				869A4A976E1F7392E6DC50EF /* Pods */,
+				930D92E8E3B199B324A22B65 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1DCBCD691E6FB13F00DF7E18 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DCBCD681E6FB13F00DF7E18 /* KLICKAT_replication3.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1DCBCD6A1E6FB13F00DF7E18 /* KLICKAT_replication3 */ = {
+			isa = PBXGroup;
+			children = (
+				1D1B19261E7037F4005298A2 /* APIHandler */,
+				1D60EBC81E72CBC300F3167D /* CommonClasses */,
+				1D60EBCA1E72CBC300F3167D /* XIBs */,
+				1D1B19291E7037F4005298A2 /* MVC */,
+				1DCBCD751E6FB13F00DF7E18 /* Assets.xcassets */,
+				1DCBCD7A1E6FB13F00DF7E18 /* Info.plist */,
+				1DCBCD721E6FB13F00DF7E18 /* KLICKAT_replication3.xcdatamodeld */,
+				1D1B19271E7037F4005298A2 /* AppDelegate */,
+			);
+			path = KLICKAT_replication3;
+			sourceTree = "<group>";
+		};
+		869A4A976E1F7392E6DC50EF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				58C1A1809FB790D0CF3F13BF /* Pods-KLICKAT_replication3.debug.xcconfig */,
+				672B0F2C9415117D64EA1F8C /* Pods-KLICKAT_replication3.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		930D92E8E3B199B324A22B65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85DB55E1913BF18BCFE015E0 /* Pods_KLICKAT_replication3.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1DCBCD671E6FB13E00DF7E18 /* KLICKAT_replication3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DCBCD7D1E6FB13F00DF7E18 /* Build configuration list for PBXNativeTarget "KLICKAT_replication3" */;
+			buildPhases = (
+				14B7E43300EB3990E35BCB2D /* [CP] Check Pods Manifest.lock */,
+				1DCBCD641E6FB13E00DF7E18 /* Sources */,
+				1DCBCD651E6FB13E00DF7E18 /* Frameworks */,
+				1DCBCD661E6FB13E00DF7E18 /* Resources */,
+				804FB9CAF8B9593473597CC2 /* [CP] Embed Pods Frameworks */,
+				0134EDE43D64B7CB67670FB7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KLICKAT_replication3;
+			productName = KLICKAT_replication3;
+			productReference = 1DCBCD681E6FB13F00DF7E18 /* KLICKAT_replication3.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1DCBCD601E6FB13E00DF7E18 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "code-brew";
+				TargetAttributes = {
+					1DCBCD671E6FB13E00DF7E18 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1DCBCD631E6FB13E00DF7E18 /* Build configuration list for PBXProject "KLICKAT_replication3" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1DCBCD5F1E6FB13E00DF7E18;
+			productRefGroup = 1DCBCD691E6FB13F00DF7E18 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1DCBCD671E6FB13E00DF7E18 /* KLICKAT_replication3 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1DCBCD661E6FB13E00DF7E18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60EBD71E72CBC300F3167D /* OffersCollectionViewCell.xib in Resources */,
+				1D1B19541E7037F4005298A2 /* LaunchScreen.storyboard in Resources */,
+				1D60EBD61E72CBC300F3167D /* ImageViewCollectionViewCell.xib in Resources */,
+				1DCBCD761E6FB13F00DF7E18 /* Assets.xcassets in Resources */,
+				1D60EBDC1E72CBC300F3167D /* ProductCategoryTableViewCell.xib in Resources */,
+				1D60EBDD1E72CBC300F3167D /* RecommendedTableViewCell.xib in Resources */,
+				1D60EBDA1E72CBC300F3167D /* ImageViewTableViewCell.xib in Resources */,
+				1D60EBD81E72CBC300F3167D /* ProductCategoryCollectionViewCell.xib in Resources */,
+				1D1B19551E7037F4005298A2 /* Main.storyboard in Resources */,
+				1D60EBDB1E72CBC300F3167D /* OffersTableViewCell.xib in Resources */,
+				1D60EBD91E72CBC300F3167D /* RecommendedCollectionViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0134EDE43D64B7CB67670FB7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KLICKAT_replication3/Pods-KLICKAT_replication3-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		14B7E43300EB3990E35BCB2D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		804FB9CAF8B9593473597CC2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KLICKAT_replication3/Pods-KLICKAT_replication3-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1DCBCD641E6FB13E00DF7E18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D1B19491E7037F4005298A2 /* RecommendedCollectionViewCell.swift in Sources */,
+				1D1B195B1E704B36005298A2 /* MapperClassForAPI.swift in Sources */,
+				1DF97A201E728E25005EA017 /* SideMenuTableViewHeaderCell.swift in Sources */,
+				1D1B194F1E7037F4005298A2 /* ProductCategoryTableViewCell.swift in Sources */,
+				1D60EBE21E72CC4D00F3167D /* AppearFunctionality.swift in Sources */,
+				1DF97A171E7276D6005EA017 /* SideMenuTableViewCell.swift in Sources */,
+				1D1B19421E7037F4005298A2 /* AppDelegate.swift in Sources */,
+				1D1B19471E7037F4005298A2 /* ProductCategoryCollectionViewCell.swift in Sources */,
+				1D1B19571E70382D005298A2 /* APIHandle.swift in Sources */,
+				1D60EBE41E72CC4D00F3167D /* EnumClass.swift in Sources */,
+				1D60EBE31E72CC4D00F3167D /* BackFunctionality.swift in Sources */,
+				1D1B19531E7037F4005298A2 /* ViewController.swift in Sources */,
+				1D1B19451E7037F4005298A2 /* OffersCollectionViewCell.swift in Sources */,
+				1D1B194D1E7037F4005298A2 /* OffersTableViewCell.swift in Sources */,
+				1DCBCD741E6FB13F00DF7E18 /* KLICKAT_replication3.xcdatamodeld in Sources */,
+				1D1B19511E7037F4005298A2 /* RecommendedTableViewCell.swift in Sources */,
+				1D1B19431E7037F4005298A2 /* ImageViewCollectionViewCell.swift in Sources */,
+				1D275BAB1E713F3500D045EA /* LeftMenuViewController.swift in Sources */,
+				1D1B194B1E7037F4005298A2 /* ImageViewTableViewCell.swift in Sources */,
+				1D60EBD51E72CBC300F3167D /* commonClass.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DCBCD7B1E6FB13F00DF7E18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1DCBCD7C1E6FB13F00DF7E18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1DCBCD7E1E6FB13F00DF7E18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58C1A1809FB790D0CF3F13BF /* Pods-KLICKAT_replication3.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KLICKAT_replication3/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "code-brew.KLICKAT-replication3";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		1DCBCD7F1E6FB13F00DF7E18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 672B0F2C9415117D64EA1F8C /* Pods-KLICKAT_replication3.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KLICKAT_replication3/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "code-brew.KLICKAT-replication3";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DCBCD631E6FB13E00DF7E18 /* Build configuration list for PBXProject "KLICKAT_replication3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DCBCD7B1E6FB13F00DF7E18 /* Debug */,
+				1DCBCD7C1E6FB13F00DF7E18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DCBCD7D1E6FB13F00DF7E18 /* Build configuration list for PBXNativeTarget "KLICKAT_replication3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DCBCD7E1E6FB13F00DF7E18 /* Debug */,
+				1DCBCD7F1E6FB13F00DF7E18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1DCBCD721E6FB13F00DF7E18 /* KLICKAT_replication3.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1DCBCD731E6FB13F00DF7E18 /* KLICKAT_replication3.xcdatamodel */,
+			);
+			currentVersion = 1DCBCD731E6FB13F00DF7E18 /* KLICKAT_replication3.xcdatamodel */;
+			path = KLICKAT_replication3.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1DCBCD601E6FB13E00DF7E18 /* Project object */;
+}

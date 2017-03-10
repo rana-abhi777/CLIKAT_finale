@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCellProduct" id="gTV-IL-0wX" customClass="ProductCategoryCollectionViewCell" customModule="KLICKAT_replication3" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="252" height="165"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="252" height="165"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sweet" translatesAutoresizingMaskIntoConstraints="NO" id="x5D-SE-4cX">
+                        <rect key="frame" x="0.0" y="0.0" width="252" height="165"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="165" id="KWd-nj-BhB"/>
+                            <constraint firstAttribute="width" constant="252" id="slG-Lc-HeJ"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RB-2x-VpD">
+                        <rect key="frame" x="0.0" y="135" width="252" height="30"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.41106592465753422" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Sweet n Nuts">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="x5D-SE-4cX" secondAttribute="bottom" id="1fg-YA-jNK"/>
+                <constraint firstAttribute="trailing" secondItem="1RB-2x-VpD" secondAttribute="trailing" id="CqS-P6-bc3"/>
+                <constraint firstItem="x5D-SE-4cX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="HC9-cj-NuV"/>
+                <constraint firstAttribute="trailing" secondItem="x5D-SE-4cX" secondAttribute="trailing" id="dSp-sn-iZK"/>
+                <constraint firstAttribute="bottom" secondItem="1RB-2x-VpD" secondAttribute="bottom" id="kQI-cn-uFk"/>
+                <constraint firstItem="1RB-2x-VpD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uwP-pf-4GC"/>
+                <constraint firstItem="x5D-SE-4cX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="wcE-r3-Ri7"/>
+            </constraints>
+            <size key="customSize" width="252" height="165"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="5"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="btnProductCategoryName" destination="1RB-2x-VpD" id="5bi-X3-zbo"/>
+                <outlet property="imgBackground" destination="x5D-SE-4cX" id="xFO-Oc-RGO"/>
+            </connections>
+            <point key="canvasLocation" x="-285" y="51"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="sweet" width="300" height="300"/>
+    </resources>
+</document>

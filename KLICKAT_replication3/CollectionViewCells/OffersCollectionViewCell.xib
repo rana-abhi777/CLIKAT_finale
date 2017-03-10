@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCellOffers" id="gTV-IL-0wX" customClass="OffersCollectionViewCell" customModule="KLICKAT_replication3" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="281" height="155"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="281" height="155"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grocery" translatesAutoresizingMaskIntoConstraints="NO" id="aFd-GB-plZ">
+                        <rect key="frame" x="0.0" y="0.0" width="281" height="122"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="122" id="AF7-55-eBZ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EkO-6W-ohV">
+                        <rect key="frame" x="0.0" y="126" width="281" height="29"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="EkO-6W-ohV" secondAttribute="bottom" id="BwT-eV-BB5"/>
+                <constraint firstAttribute="trailing" secondItem="aFd-GB-plZ" secondAttribute="trailing" id="M0b-e9-kr2"/>
+                <constraint firstItem="EkO-6W-ohV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="OwW-ZP-d3c"/>
+                <constraint firstAttribute="trailing" secondItem="EkO-6W-ohV" secondAttribute="trailing" id="U5Y-Ns-nfy"/>
+                <constraint firstItem="EkO-6W-ohV" firstAttribute="top" secondItem="aFd-GB-plZ" secondAttribute="bottom" constant="4" id="aRf-VH-07a"/>
+                <constraint firstItem="aFd-GB-plZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qyn-TD-ICN"/>
+                <constraint firstItem="aFd-GB-plZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="zLa-BD-YZC"/>
+            </constraints>
+            <size key="customSize" width="281" height="155"/>
+            <connections>
+                <outlet property="OfferImage" destination="aFd-GB-plZ" id="mjj-ei-F7F"/>
+                <outlet property="lblOfferName" destination="EkO-6W-ohV" id="eJc-Yh-FXh"/>
+            </connections>
+            <point key="canvasLocation" x="-9.5" y="40.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="grocery" width="800" height="508"/>
+    </resources>
+</document>
