@@ -9,7 +9,9 @@
 import UIKit
 
 class ImageViewTableViewCell: UITableViewCell {
-
+    
+    var imageNumber = 0
+    
     @IBOutlet weak var searchProduct: UISearchBar!
     @IBOutlet weak var collectionImages: UICollectionView!
     @IBOutlet weak var collectionCellForImages: UICollectionView!
@@ -28,32 +30,6 @@ class ImageViewTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-//    func scrollToNextCell(){
-//        
-//        //get cell size
-//        let cellSize = CGSize(self.view.frame.width, self.collectionImages.frame.height)
-//        
-//        //get current content Offset of the Collection view
-//        let contentOffset = collectionImages.contentOffset;
-//        
-//        if collectionView.contentSize.width <= collectionView.contentOffset.x + cellSize.width
-//        {
-//            collectionView.scrollRectToVisible(CGRectMake(0, contentOffset.y, cellSize.width, cellSize.height), animated: true);
-//            
-//        } else {
-//            collectionView.scrollRectToVisible(CGRectMake(contentOffset.x + cellSize.width, contentOffset.y, cellSize.width, cellSize.height), animated: true);
-//            
-//        }
-//        
-//    }
-//    
-//    /**
-//     Invokes Timer to start Automatic Animation with repeat enabled
-//     */
-//    func startTimer() {
-//        Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(ImageViewTableViewCell.scrollToNextCell), userInfo: nil, repeats: true);
-//    }
-//    
 }
 extension ImageViewTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -62,9 +38,34 @@ extension ImageViewTableViewCell: UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0.0
+    }
+    func collectionView(_ collectionView: UICollectionView, layout
+        collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0.0
+    }
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let CollectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCellImageView", for: indexPath) as! ImageViewCollectionViewCell
         return CollectionCell
+    }
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        var visible = CGRect()
+        visible.origin = collectionImages.contentOffset
+        visible.size = collectionImages.bounds.size
+        let visiblePoint = CGPoint(x: visible.midX, y: visible.midY)
+        let visibleIndexPath  = collectionImages.indexPathForItem(at: visiblePoint)
+        if visibleIndexPath == [0, 9] {
+            imageNumber = imageNumber + 1
+            print(imageNumber)
+        }
+        if imageNumber == 1 {
+            collectionImages.scrollToItem(at: IndexPath(row: 0, section: 0 ), at: .centeredHorizontally, animated: true)
+        }
     }
 
 }

@@ -14,7 +14,9 @@ class ProductCategoryTableViewCell: UITableViewCell {
     
     var categoryName = [String]()
     var categoryImageUrls = [String]()
-
+    
+    var frameWidth = Int()
+    
     @IBOutlet weak var collectionProductCategory: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -45,7 +47,7 @@ extension ProductCategoryTableViewCell: UICollectionViewDelegate, UICollectionVi
         collectionCell.btnProductCategoryName.setTitle(name, for: .normal)
         collectionCell.imgBackground.kf.setImage(with: url)
         if indexPath.row == (categoryName.count - 1) {
-            collectionCell.frame.size.width = 300
+            collectionCell.frame.size.width = CGFloat(frameWidth - 20)
             collectionCell.frame.size.height = 150
         }
         
