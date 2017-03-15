@@ -18,6 +18,7 @@
 		1D1B19511E7037F4005298A2 /* RecommendedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1B193B1E7037F4005298A2 /* RecommendedTableViewCell.swift */; };
 		1D1B19571E70382D005298A2 /* APIHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1B19561E70382D005298A2 /* APIHandle.swift */; };
 		1D1B195B1E704B36005298A2 /* MapperClassForAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1B195A1E704B36005298A2 /* MapperClassForAPI.swift */; };
+		1D2D4D8E1E796E53003B99DC /* enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2D4D8D1E796E53003B99DC /* enums.swift */; };
 		1D57E2861E790DF9003AF359 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D57E2811E790DF9003AF359 /* LeftMenuViewController.swift */; };
 		1D57E2871E790DF9003AF359 /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D57E2821E790DF9003AF359 /* SideMenuTableViewCell.swift */; };
 		1D57E2881E790DF9003AF359 /* SideMenuTableViewHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D57E2831E790DF9003AF359 /* SideMenuTableViewHeaderCell.swift */; };
@@ -53,6 +54,7 @@
 		1D1B193B1E7037F4005298A2 /* RecommendedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendedTableViewCell.swift; sourceTree = "<group>"; };
 		1D1B19561E70382D005298A2 /* APIHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHandle.swift; sourceTree = "<group>"; };
 		1D1B195A1E704B36005298A2 /* MapperClassForAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapperClassForAPI.swift; sourceTree = "<group>"; };
+		1D2D4D8D1E796E53003B99DC /* enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = enums.swift; sourceTree = "<group>"; };
 		1D57E2811E790DF9003AF359 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
 		1D57E2821E790DF9003AF359 /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		1D57E2831E790DF9003AF359 /* SideMenuTableViewHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewHeaderCell.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				1DCBCD7A1E6FB13F00DF7E18 /* Info.plist */,
 				1DCBCD721E6FB13F00DF7E18 /* KLICKAT_replication3.xcdatamodeld */,
 				1D1B19271E7037F4005298A2 /* AppDelegate */,
+				1D2D4D8D1E796E53003B99DC /* enums.swift */,
 			);
 			path = KLICKAT_replication3;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				1D1B194F1E7037F4005298A2 /* ProductCategoryTableViewCell.swift in Sources */,
 				1D60EBE21E72CC4D00F3167D /* AppearFunctionality.swift in Sources */,
 				1D1B19421E7037F4005298A2 /* AppDelegate.swift in Sources */,
+				1D2D4D8E1E796E53003B99DC /* enums.swift in Sources */,
 				1D1B19471E7037F4005298A2 /* ProductCategoryCollectionViewCell.swift in Sources */,
 				1D1B19571E70382D005298A2 /* APIHandle.swift in Sources */,
 				1D60EBE41E72CC4D00F3167D /* EnumClass.swift in Sources */,

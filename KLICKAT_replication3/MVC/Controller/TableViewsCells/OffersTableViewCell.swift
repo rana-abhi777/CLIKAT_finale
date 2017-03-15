@@ -14,11 +14,14 @@ class OffersTableViewCell: UITableViewCell {
     @IBOutlet weak var btnViewAll: UIButton!
     @IBOutlet weak var offersCollection: UICollectionView!
     
+    let offersNibName = collectionCellsNibNames.offersCollection.rawValue
+    let collectionCellID = collectionCellsReuseID.offersCollection.rawValue
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        let nibname = UINib(nibName: "OffersCollectionViewCell", bundle: nil)
-        offersCollection.register(nibname, forCellWithReuseIdentifier: "collectionCellOffers")
+        let nibname = UINib(nibName: offersNibName, bundle: nil)
+        offersCollection.register(nibname, forCellWithReuseIdentifier: collectionCellID)
         offersCollection.delegate = self
         offersCollection.dataSource = self
 
@@ -39,7 +42,7 @@ extension OffersTableViewCell: UICollectionViewDelegate, UICollectionViewDataSou
         return 10
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let CollectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCellOffers", for: indexPath) as! OffersCollectionViewCell
+        let CollectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionCellID, for: indexPath) as! OffersCollectionViewCell
         return CollectionCell
     }
 

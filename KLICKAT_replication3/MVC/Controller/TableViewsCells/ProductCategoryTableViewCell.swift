@@ -14,15 +14,17 @@ class ProductCategoryTableViewCell: UITableViewCell {
     
     var categoryName = [String]()
     var categoryImageUrls = [String]()
-    
     var frameWidth = Int()
+    
+    let productNibName = collectionCellsNibNames.productCollection.rawValue
+    let collectionCellID = collectionCellsReuseID.productCollection.rawValue
     
     @IBOutlet weak var collectionProductCategory: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        let nibname = UINib(nibName: "ProductCategoryCollectionViewCell", bundle: nil)
-        collectionProductCategory.register(nibname, forCellWithReuseIdentifier: "collectionCellProduct")
+        let nibname = UINib(nibName: productNibName, bundle: nil)
+        collectionProductCategory.register(nibname, forCellWithReuseIdentifier: collectionCellID)
         collectionProductCategory.delegate = self
         collectionProductCategory.dataSource = self
     }
@@ -40,7 +42,7 @@ extension ProductCategoryTableViewCell: UICollectionViewDelegate, UICollectionVi
         return categoryName.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let collectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCellProduct", for: indexPath) as! ProductCategoryCollectionViewCell
+        let collectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionCellID, for: indexPath) as! ProductCategoryCollectionViewCell
         let name = categoryName[indexPath.item]
         let image = categoryImageUrls[indexPath.item]
         let url = URL(string: image)

@@ -16,13 +16,32 @@ class ImageViewTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionImages: UICollectionView!
     @IBOutlet weak var collectionCellForImages: UICollectionView!
     
+    let imageNibName = collectionCellsNibNames.imageCollection.rawValue
+    let collectionCellID = collectionCellsReuseID.imageCollection.rawValue
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        let nibName = UINib(nibName: "ImageViewCollectionViewCell", bundle: nil)
-        collectionImages.register(nibName, forCellWithReuseIdentifier: "collectionCellImageView")
+        let nibName = UINib(nibName: imageNibName, bundle: nil)
+        collectionImages.register(nibName, forCellWithReuseIdentifier: collectionCellID)
         collectionImages.delegate = self
         collectionImages.dataSource = self
+        //self.startTimer()
+    }
+    func scrollToNextCell(){
+        
+        let cellSize = CGSize(width: self.collectionImages.frame.width, height: self.collectionImages.frame.height)
+        let contentOffset = collectionImages.contentOffset;
+        collectionImages.scrollRectToVisible(CGRect(x: contentOffset.x, y: contentOffset.y, width: cellSize.width, height: cellSize.height), animated: true)
+    }
+    
+    func startTimer() {
+        
+        _ = Timer.scheduledTimer(timeInterval: 2.0,
+                                 target: self,
+                                 selector: #selector(scrollToNextCell),
+                                 userInfo: nil,
+                                 repeats: false)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -50,10 +69,46 @@ extension ImageViewTableViewCell: UICollectionViewDataSource, UICollectionViewDe
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let CollectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCellImageView", for: indexPath) as! ImageViewCollectionViewCell
+        self.startTimer()
+        if indexPath.row == 9 {
+            scrollViewDidEndScrollingAnimation(collectionImages)
+        }
+        let CollectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionCellID, for: indexPath) as! ImageViewCollectionViewCell
         return CollectionCell
     }
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+//    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+//        let targetContentOffset = scrollView.contentOffset
+//        // set acceleration to 0.0
+//        var pageWidth = Float(self.collectionImages.bounds.size.width)
+//        var minSpace: Int = 10
+//        var cellToSwipe: Int = Int((scrollView.contentOffset.x)) / Int(pageWidth + Float(minSpace)) + Int(0.5)
+//        // cell width + min spacing for lines
+//        if cellToSwipe < 0 {
+//            cellToSwipe = 0
+//        }
+//        else if cellToSwipe >= 9 {
+//            cellToSwipe = self.articles.count - 1
+//        }
+//        
+//        self.collectionImages.scrollToItem(at: IndexPath(row: cellToSwipe, section: 0), at: .left, animated: true)
+//    }
+    
+//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+//        var visible = CGRect()
+//        visible.origin = collectionImages.contentOffset
+//        visible.size = collectionImages.bounds.size
+//        let visiblePoint = CGPoint(x: visible.midX, y: visible.midY)
+//        let visibleIndexPath  = collectionImages.indexPathForItem(at: visiblePoint)
+//        if visibleIndexPath == [0, 9] {
+//            imageNumber = imageNumber + 1
+//            print(imageNumber)
+//        }
+//        if imageNumber == 1 {
+//            collectionImages.scrollToItem(at: IndexPath(row: 0, section: 0 ), at: .centeredHorizontally, animated: true)
+//            imageNumber = 0
+//        }
+//    }
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
         var visible = CGRect()
         visible.origin = collectionImages.contentOffset
         visible.size = collectionImages.bounds.size
@@ -65,7 +120,9 @@ extension ImageViewTableViewCell: UICollectionViewDataSource, UICollectionViewDe
         }
         if imageNumber == 1 {
             collectionImages.scrollToItem(at: IndexPath(row: 0, section: 0 ), at: .centeredHorizontally, animated: true)
+            imageNumber = 0
         }
+
     }
 
 }

@@ -19,6 +19,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnSideMenu: UIButton!
     @IBOutlet weak var tableMainTable: UITableView!
     
+    let leftViewControllerID = viewControllers.LeftMenu.rawValue
+    let area = parameters.areaid.rawValue
+    let country = parameters.countryid.rawValue
+    
     var flag: Int = 0
     var categoryName = [String]()
     var categoryImageUrls = [String]()
@@ -31,7 +35,7 @@ class ViewController: UIViewController {
             difference = translation.x - translation1
             if(difference >= 0.0)
             {   if (flag == 0){
-                Appearance.ShowPanel(obj: self,opr: .left,identifier: "LeftMenuViewController"){_ in
+                Appearance.ShowPanel(obj: self,opr: .left,identifier: leftViewControllerID){_ in
                     self.flag = 1
                     }
                 }
@@ -40,7 +44,8 @@ class ViewController: UIViewController {
     }
     func fetchData()
     {
-        let param:[String:Any] = ["areaId": 201, "countryId": 1, "flag":"1"]
+        
+        let param:[String:Any] = [area: 201, country: 1, "flag":"1"]
         
         SVProgressHUD.show()
         SVProgressHUD.setDefaultAnimationType(SVProgressHUDAnimationType.native)
@@ -48,7 +53,7 @@ class ViewController: UIViewController {
         
         
         ApiHandler.fetchData(urlStr: "get_all_category", parameters: param) { (jsonData) in
-            //print(jsonData!)
+//            print(jsonData!)
             SVProgressHUD.show()
             SVProgressHUD.setDefaultAnimationType(SVProgressHUDAnimationType.native)
             SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.custom)
@@ -61,7 +66,6 @@ class ViewController: UIViewController {
             }
             SVProgressHUD.dismiss()
             self.tableMainTable.reloadData()
-            
         }
 
     }
@@ -80,7 +84,7 @@ class ViewController: UIViewController {
     
     @IBAction func SideMenuClick(_ sender: Any) {
         self.btnSideMenu.isEnabled = false
-        Appearance.ShowPanel(obj: self,opr: .left,identifier: "LeftMenuViewController"){_ in
+        Appearance.ShowPanel(obj: self,opr: .left,identifier: leftViewControllerID){_ in
             self.btnSideMenu.isEnabled = true
             }
     }
@@ -94,41 +98,43 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return 4
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "tableCellMain", for: indexPath) as? MainTableViewCell else{
-//            fatalError()
-//        }
+        var nibNames = ""
         switch(indexPath.row){
         case 0:
-            let cell = Bundle.main.loadNibNamed("ImageViewTableViewCell", owner: self, options: nil)?.first as! ImageViewTableViewCell
+            nibNames = tableCellsNibNames.imageTable.rawValue
+            let cell = Bundle.main.loadNibNamed(nibNames, owner: self, options: nil)?.first as! ImageViewTableViewCell
             
             return cell
         case 1:
-            let cell = Bundle.main.loadNibNamed("ProductCategoryTableViewCell", owner: self, options: nil)?.first as! ProductCategoryTableViewCell
+            nibNames = tableCellsNibNames.productTable.rawValue
+            let cell = Bundle.main.loadNibNamed(nibNames, owner: self, options: nil)?.first as! ProductCategoryTableViewCell
             cell.categoryName = self.categoryName
             cell.frameWidth = self.superFrameWidth
             cell.categoryImageUrls = self.categoryImageUrls
             return cell
         case 2:
-            let cell = Bundle.main.loadNibNamed("OffersTableViewCell", owner: self, options: nil)?.first as! OffersTableViewCell
+            nibNames = tableCellsNibNames.offersTable.rawValue
+            let cell = Bundle.main.loadNibNamed(nibNames, owner: self, options: nil)?.first as! OffersTableViewCell
             return cell
         case 3:
-            let cell = Bundle.main.loadNibNamed("RecommendedTableViewCell", owner: self, options: nil)?.first as! RecommendedTableViewCell
+            nibNames = tableCellsNibNames.recommendedTable.rawValue
+            let cell = Bundle.main.loadNibNamed(nibNames, owner: self, options: nil)?.first as! RecommendedTableViewCell
             return cell
         default:
-            let cell = Bundle.main.loadNibNamed("ImageTableViewCell", owner: self, options: nil)?.first as! ImageViewTableViewCell
+            let cell = Bundle.main.loadNibNamed(nibNames, owner: self, options: nil)?.first as! ImageViewTableViewCell
             return cell
         }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch(indexPath.row){
         case 0:
-            return 234
+            return CGFloat(heightForTableCell.cell1.rawValue)
         case 1:
-            return 980
+            return CGFloat(heightForTableCell.cell2.rawValue)
         case 2:
-            return 161
+            return CGFloat(heightForTableCell.cell3.rawValue)
         case 3:
-            return 161
+            return CGFloat(heightForTableCell.cell3.rawValue)
         default:
             return 100
         }

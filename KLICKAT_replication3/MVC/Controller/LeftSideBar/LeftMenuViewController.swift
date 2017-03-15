@@ -16,6 +16,9 @@ class LeftMenuViewController: UIViewController {
     @IBOutlet weak var lblWelcomeMessage: UILabel!
     @IBOutlet weak var lblUserName: UILabel!
     
+    let headerID = leftMenuCellID.header.rawValue
+    let cellID = leftMenuCellID.cell.rawValue
+    
     var rowCount = Int()
     var nameArray = [["Home", "Live Support", "Cart", "Promotions", "Notifications", "Compare Products"],
                      ["Rate my order", "Order History", "Loyalit Points", "Share app", "Terms & Conditions", "About Us", "Settings"]
@@ -66,7 +69,7 @@ extension LeftMenuViewController: UITableViewDataSource, UITableViewDelegate {
         return rowCount
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let tableCell = tableView.dequeueReusableCell(withIdentifier: "SideBarTableCell", for: indexPath) as! SideMenuTableViewCell
+        let tableCell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! SideMenuTableViewCell
         tableCell.backgroundColor = UIColor.clear
         tableCell.btnMenuItems.setTitle(MyAccountArray[indexPath.row], for: .normal)
         return tableCell
@@ -77,11 +80,11 @@ extension LeftMenuViewController: UITableViewDataSource, UITableViewDelegate {
         switch section {
         case 0: 
             //headerCell.btnheaderName.setTitle("Main Section", for: .normal)
-            let  headerCell = tableView.dequeueReusableCell(withIdentifier: "SideBarTableHeaderCell") as! SideMenuTableViewHeaderCell
+            let  headerCell = tableView.dequeueReusableCell(withIdentifier: headerID) as! SideMenuTableViewHeaderCell
         
             return headerCell
         default:
-            let  headerCell = tableView.dequeueReusableCell(withIdentifier: "SideBarTableHeaderCell") as! SideMenuTableViewHeaderCell
+            let  headerCell = tableView.dequeueReusableCell(withIdentifier: headerID) as! SideMenuTableViewHeaderCell
             headerCell.btnheaderName.setTitle("Accounts", for: .normal)
             return headerCell
         }
